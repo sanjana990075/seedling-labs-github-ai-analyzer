@@ -61,6 +61,8 @@ Seedling_Labs_Github_Analyzer
 └── README.md               # Project documentation
 ```
 
+#### 🛠️ Steps for Implementation
+
 ### 1. Clone & Install
 
 ```bash
