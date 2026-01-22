@@ -110,8 +110,6 @@ streamlit run frontend.py
 
 ---
 
----
-
 ## 📝 Sample Output
 
 **Input Issue (Example):**
@@ -215,8 +213,6 @@ The backend exposes the following REST endpoints:
 ### 4. Communication
 - **Git History**: Clear, atomic commits.
 - **Documentation**: This README acts as a clear entry point for any developer.
-
----
 
 ---
 
