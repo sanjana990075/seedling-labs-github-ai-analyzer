@@ -60,6 +60,7 @@ Seedling_Labs_Github_Analyzer
 ├── requirements.txt        # Project dependencies
 └── README.md               # Project documentation
 ```
+---
 
 #### 🛠️ Steps for Implementation
 
