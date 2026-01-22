@@ -118,6 +118,10 @@ streamlit run frontend.py
 
 **Generated Analysis (Sample):**
 
+**⏱ Analysis Time**  
+Analysis Complete (10.69s) --(Represents the total time taken to fetch the issue context and generate the AI analysis.)
+
+
 **Issue Type**  
 Bug  
 
