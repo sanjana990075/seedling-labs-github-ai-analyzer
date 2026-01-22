@@ -65,7 +65,7 @@ Seedling_Labs_Github_Analyzer
 ## 🏗️ Architecture
 
 ```mermaid
-graph TD
+graph LR
     User --> Streamlit
     Streamlit --> FastAPI
     FastAPI --> GitHub
