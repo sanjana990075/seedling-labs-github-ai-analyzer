@@ -188,7 +188,7 @@ The backend exposes the following REST endpoints:
     "summary": "Issue summary...",
     "type": "bug",
     "priority_score": "5 - Critical",
-    "suggested_labels": ["bug", "urgent"],
+    "suggested_labels": ["bug", "urgent", "zod"],
     "potential_impact": "High impact..."
   }
   ```
