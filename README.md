@@ -32,7 +32,6 @@ At fast-moving companies like Seedling Labs, engineering throughput is critical.
 | **Robust AI Core** | Uses **Few-Shot Prompting** in `llm_service.py` to guarantee strict JSON output. | Includes a **Self-Healing Mechanics** (JSON sanitization) if the LLM output is imperfect. |
 | **Interactive UI** | Built with Streamlit for a responsive, modern interface. | **Raw JSON Toggle**, **Copy-to-Clipboard** button for developers, and loading states. |
 | **Performance** | Asynchronous-ready FastAPI backend. | **Caching**: Minimizes API costs and latency by caching duplicate requests. |
-| **Reliability** | Comprehensive Unit Test Suite. | **CI/CD**: GitHub Actions workflow runs tests automatically on every commit. |
 
 ---
 
