@@ -62,6 +62,25 @@ Seedling_Labs_Github_Analyzer
 ```
 ---
 
+## 🏗️ Architecture
+
+```mermaid
+graph TD
+    User([User]) -->|Interacts| UI[Streamlit Frontend]
+    UI -->|Requests Analysis| API[FastAPI Backend]
+    
+    subgraph Services
+        API -->|1. Fetch Issue Data| GH[GitHub Service]
+        GH <-->|API Call| GHAPI((GitHub API))
+        API -->|2. Send Context| LLM[LLM Service]
+        LLM <-->|Generates Insights| Gemini((Google Gemini API))
+    end
+    
+    LLM -->|3. Return JSON| API
+    API -->|4. Display Results| UI
+```
+---
+
 #### 🛠️ Steps for Implementation
 
 ### 1. Clone & Install
