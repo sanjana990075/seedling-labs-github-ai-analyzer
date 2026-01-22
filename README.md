@@ -40,7 +40,7 @@ At fast-moving companies like Seedling Labs, engineering throughput is critical.
 
 - **Backend:** Python, FastAPI, Pydantic (Type Safety)
 - **Frontend:** Streamlit
-- **AI/LLM:** Google Gemini 1.5 Flash (via `google-genai`)
+- **AI/LLM:** Google Gemini 1.5 Flash Lite (`models/gemini-flash-lite-latest`) via `google-genai`
 - **Testing:** Pytest, HTTPX, Mock
 - **DevOps:** GitHub Actions
 
@@ -54,10 +54,7 @@ Seedling_Labs_Github_Analyzer
 ├── services/
 │   ├── github_service.py   # GitHub API interaction logic
 │   └── llm_service.py      # Gemini AI integration & prompt engineering
-├── tests/
-│   ├── test_github_service.py
-│   ├── test_llm_service.py
-│   └── test_main.py
+├── .env                    # Stores environment-specific configuration such as API keys.
 ├── frontend.py             # Streamlit UI application
 ├── main.py                 # FastAPI backend entry point
 ├── requirements.txt        # Project dependencies
@@ -65,20 +62,29 @@ Seedling_Labs_Github_Analyzer
 ```
 
 ### 1. Clone & Install
-```bash
-git clone https://github.com/sanjana990075/Seedling_Labs_Github_Analyzer.git
-cd Seedling_Labs_Github_Analyzer
 
+```bash
+git clone https://github.com/sanjana990075/seedling-labs-github-ai-analyzer
+cd seedling-labs-github-ai-analyzer
+
+# Create virtual environment
 python -m venv venv
+
+# Activate virtual environment
+
 # Windows:
 venv\Scripts\activate
-# Mac/Linux:
+
+# macOS / Linux:
 source venv/bin/activate
 
+# Install dependencies
 pip install -r requirements.txt
+
 ```
 
 ### 2. Configure Credentials
+
 ```bash
 # Create a .env file in the root directory
 # A sample configuration is already provided in .env.example for reference
@@ -88,14 +94,15 @@ pip install -r requirements.txt
 
 GOOGLE_API_KEY=your_google_api_key_here   # required
 GITHUB_TOKEN=your_github_token_here       # optional
-
+```
 
 ### 3. Run Application
 **Backend:**
 ```bash
 uvicorn main:app --reload
 ```
-**Frontend:** (New Terminal)
+
+**Frontend:** (Open a new terminal):
 ```bash
 streamlit run frontend.py
 ```
