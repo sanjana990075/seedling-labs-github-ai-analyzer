@@ -4,11 +4,6 @@ import json
 import time
 import textwrap
 
-BACKEND_URL = st.secrets.get(
-    "BACKEND_URL",
-    "http://localhost:8000"
-)
-
 # Page Configuration
 st.set_page_config(
     page_title="GitHub Issue Analyzer",
@@ -71,9 +66,10 @@ with col2:
 def get_analysis(url, issue):
     """Call backend API and return response."""
     response = requests.post(
-    f"{BACKEND_URL}/analyze",
-    json={"repo_url": url, "issue_number": issue},
-    timeout=45)
+        "http://localhost:8000/analyze",
+        json={"repo_url": url, "issue_number": issue},
+        timeout=45
+    )
     return response
 
 # ---------- Analyze Button ----------
