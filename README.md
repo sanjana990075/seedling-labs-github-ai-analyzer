@@ -201,7 +201,7 @@ The backend exposes the following REST endpoints:
 
 ---
 
-## �📊 Assessment Readiness
+## 📊 Assessment Readiness
 
 ### 1. Problem Solving & AI Acumen
 - **Prompt Engineering**: Utilized `system_instructions` with 2 distinct few-shot examples to enforce the JSON schema.
