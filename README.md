@@ -110,20 +110,53 @@ streamlit run frontend.py
 
 ---
 
+---
+
 ## 📝 Sample Output
 
-**Input Issue:** *React - "Bug: useEffect cleanups are not running"*
+**Input Issue (Example):**
+- **Repository URL:** https://github.com/facebook/react
+- **Issue Number:** 24502
 
-**Generated Analysis:**
+**Generated Analysis (Sample):**
+
+**Issue Type**  
+Bug  
+
+**Priority Score**  
+3/5 (3 – Not a functional bug, but a significant unexpected behavior change requiring documentation or clarification.)
+
+**Summary**  
+The user is observing that `useEffect` runs twice on component mount in development mode when using React 18 Strict Mode, which is the intended behavior to ensure side effects are idempotent.
+
+**Potential Impact**  
+Confusion for developers upgrading to React 18 regarding the lifecycle of `useEffect` in development, potentially leading to unnecessary complexity in handling side effects such as data fetching.
+
+**Suggested Labels**  
+- react-18  
+- strict-mode  
+- documentation  
+
+**📦 Raw JSON Response**
 ```json
 {
-  "summary": "Users are reporting that cleanup functions in useEffect are not triggering correctly in strict mode.",
+  "summary": "The user is observing that `useEffect` runs twice on component mount in development mode when using React 18 Strict Mode, which is the intended behavior to ensure side effects are idempotent.",
   "type": "bug",
-  "priority_score": "4 - High priority as it affects core component lifecycle behavior",
-  "suggested_labels": ["react-core", "hooks", "bug"],
-  "potential_impact": "Could cause memory leaks or inconsistent state in applications relying on cleanup logic."
+  "priority_score": "3 - Not a functional bug, but a significant unexpected behavior change requiring documentation/clarification.",
+  "suggested_labels": [
+    "react-18",
+    "strict-mode",
+    "documentation"
+  ],
+  "potential_impact": "Confusion for developers upgrading to React 18 regarding the lifecycle of `useEffect` in development, potentially leading to unnecessary complexity in handling side effects like data fetching."
 }
 ```
+
+📋 Usability Features
+
+The structured JSON response can be copied directly from the UI
+
+The analysis can also be downloaded as a JSON file for further use (e.g., issue triage, documentation, or automation)
 
 ---
 
@@ -182,5 +215,15 @@ The backend exposes the following REST endpoints:
 ### 4. Communication
 - **Git History**: Clear, atomic commits.
 - **Documentation**: This README acts as a clear entry point for any developer.
+
+---
+
+---
+
+## ✅ Conclusion
+
+This project demonstrates an end-to-end AI-powered GitHub issue analysis system that combines secure API integration, backend orchestration, and a user-friendly frontend. By aggregating the complete issue context (title, description, and comments) and analyzing it with Google Gemini, the system produces a structured JSON output suitable for immediate triage and decision-making.
+
+Overall, this project showcases practical LLM integration for real-world developer workflows and reflects a production-ready approach to building reliable, secure, and maintainable AI-assisted tooling.
 
 ---
