@@ -240,3 +240,6 @@ This project demonstrates an end-to-end AI-powered GitHub issue analysis system 
 Overall, this project showcases practical LLM integration for real-world developer workflows and reflects a production-ready approach to building reliable, secure, and maintainable AI-assisted tooling.
 
 ---
+## Live Demo
+🔗 https://llmanalyser.streamlit.app/
+
